@@ -18,6 +18,14 @@ cask "bossterm" do
 
   app "BossTerm.app"
 
+  # Install CLI tool for terminal access
+  binary "BossTerm.app/Contents/Resources/bossterm"
+
+  postflight do
+    # Ensure CLI is executable
+    set_permissions "#{HOMEBREW_PREFIX}/bin/bossterm", "0755"
+  end
+
   zap trash: [
     "~/Library/Application Support/BossTerm",
     "~/Library/Caches/ai.rever.bossterm",
