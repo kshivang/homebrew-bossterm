@@ -1,6 +1,6 @@
 cask "bossterm" do
-  version "1.0.15"
-  sha256 "3fd72f578b2e7865cd58464589d7e4f59715a0c651e8ff00939610e6c478a9e9"
+  version "1.0.18"
+  sha256 "3f2a7b3a6a63528b6aba86ac30d95031238d7f331a89ad6e2b0bb83511bc483c"
 
   url "https://github.com/kshivang/BossTerm/releases/download/v#{version}/BossTerm-#{version}.dmg",
       verified: "github.com/kshivang/BossTerm/"
@@ -17,14 +17,6 @@ cask "bossterm" do
   depends_on macos: ">= :big_sur"
 
   app "BossTerm.app"
-
-  # Install CLI tool for terminal access
-  binary "BossTerm.app/Contents/Resources/bossterm"
-
-  postflight do
-    # Ensure CLI is executable
-    set_permissions "#{HOMEBREW_PREFIX}/bin/bossterm", "0755"
-  end
 
   zap trash: [
     "~/Library/Application Support/BossTerm",
