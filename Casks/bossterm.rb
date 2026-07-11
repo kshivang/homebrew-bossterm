@@ -1,6 +1,6 @@
 cask "bossterm" do
-  version "1.2.129"
-  sha256 "881c887bae481bf4295fa8c951d189badaff8477f6b916aca6a8e3d285e3fda6"
+  version "1.2.130"
+  sha256 "210c6ed42cd04491656e88e631df1626f940c0eb7f2026a759a41aeffe776821"
 
   url "https://github.com/kshivang/BossTerm/releases/download/v#{version}/BossTerm-#{version}.dmg",
       verified: "github.com/kshivang/BossTerm/"
